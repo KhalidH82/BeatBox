@@ -1,7 +1,7 @@
 # BeatBox
 Group project using React and Express
-<img src="./screen.png">
-BeatBox
+<a href="https://beatbox1.herokuapp.com/"><img src="./screen.png"></a>
+
 
 An application where users will have an accessible personal account and can select and store music from a 3rd party api into their own playlists and save their song for random access.
 
