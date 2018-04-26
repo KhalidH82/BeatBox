@@ -1,4 +1,4 @@
-\c testing_for_react_db
+
 
 DROP TABLE IF EXISTS test_table;
 DROP TABLE IF EXISTS song_library;

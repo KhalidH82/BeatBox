@@ -23,7 +23,7 @@ class UserHome extends Component {
     this.renderLogin = this.renderLogin.bind(this)
   }
   componentDidMount(){
-    axios(`http://localhost:3000/isLoggedIn`, {
+    axios(`https://beatbox1.herokuapp.com/isLoggedIn`, {
       headers: {
         Authorization: `Bearer ${TokenService.read()}`,
       },
@@ -52,7 +52,7 @@ class UserHome extends Component {
   }
   register(data){
     console.log(`I am the data`, data);
-    axios('http://localhost:3000/users/', {
+    axios('https://beatbox1.herokuapp.com/users/', {
       method: "POST",
       data
     }).then(resp => {
@@ -68,7 +68,7 @@ class UserHome extends Component {
     .catch(err => console.log(`err: ${err}`));
   }
   login(data){
-    axios(`http://localhost:3000/users/login`, {
+    axios(`https://beatbox1.herokuapp.com/users/login`, {
       method: "POST",
       data
     }).then(resp => {
@@ -88,7 +88,7 @@ class UserHome extends Component {
 
   authClick(event) {
     event.preventDefault();
-    axios('http://localhost:3000/restricted', {
+    axios('https://beatbox1.herokuapp.com/restricted', {
       headers: {
         Authorization: `Bearer ${TokenService.read()}`,
       },

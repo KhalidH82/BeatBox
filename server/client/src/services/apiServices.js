@@ -65,7 +65,7 @@ services.addPlaylist = (data) => {
 
 //Read
 services.getAllPlaylists = () => {
-  return axios.get(`/playlist`)
+  return axios.get(`playlist`)
 }
 
 services.getOnePlaylist = (id) => {
@@ -117,7 +117,7 @@ services.removeSongFromPlaylist = (songData) => {
   // console.log(`here is the song data that I am passing in from apiServices ---> `, songData)
   return axios({
     method: 'DELETE',
-    url: `/song/${songData.song_id}`,
+    url: `song/${songData.song_id}`,
     data: {
       plist_id: songData.playlist_id,
       song_id: songData.song_id

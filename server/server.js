@@ -38,7 +38,12 @@ app.get('/restricted', authServices.restrict(), (req, res) => {
 app.get('/isLoggedIn', authServices.isLoggedIn, (req, res) => {
   res.json({isLoggedIn: res.locals.isLoggedIn})
 })
-
+app.use(express.static('client/build'));
+// app.use('/', (req, res) => {
+// 	res.json ({
+// 		message: 'hello world'
+// 	})
+// })
 //DELETE ROUTE LATER**************
 // app.use('/api/songs', mainRouter);
 //DELETE ROUTE LATER**************
